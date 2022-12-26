@@ -1,6 +1,5 @@
 
 <?php
-
 do{
     $number = (int)readline("Введите число - ");
 } while ($number<=0);
