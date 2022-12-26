@@ -1,4 +1,3 @@
-
 <?php
 do{
     $number = (int)readline("Введите число - ");
