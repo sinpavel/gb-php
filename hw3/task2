@@ -1,0 +1,16 @@
+<?php
+$epitet = ['безграничного', 'безудержного', 'космического', 'бесконечного', 'бескрайнего'];
+$wishes = ['здоровья', 'успеха', 'терпенья', 'веселья', 'счастья'];
+$name = readline('Введите имя именинника ');
+for ($i = 0; $i < 3; $i++){
+    $randomIndex1 = array_rand($epitet);
+    $randomIndex2 = array_rand($wishes);
+    $randomEpitet[$i] = $epitet[$randomIndex1];
+    $randomWishes[$i] = $wishes[$randomIndex2];
+    $congratulations[$i] = $randomEpitet[$i]. ' '. $randomWishes[$i];
+    unset ($epitet[$randomIndex1]);
+    unset ($wishes[$randomIndex2]);
+}
+$lastCongratulations = array_pop($congratulations);
+$string_congratulations = implode($congratulations,', ');
+echo 'Дорогой '.$name.', от всего сердца поздравляю тебя с днем рождения, желаю '.$string_congratulations.' и '.$lastCongratulations.'!';
